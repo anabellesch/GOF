@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace PII_Game_Of_Life
 {
@@ -6,7 +6,14 @@ namespace PII_Game_Of_Life
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Tablero tablero= new Tablero();
+            while (true) {
+
+                MostrarTablero.printTablero(Tablero);
+                logica.nuevaGeneracion(Tablero);
+                Thread.sleep(300); //DETIENE LA EJECUCION DURANTE 300 MILISEGUNDOS
+            }
         }
     }
 }
+
